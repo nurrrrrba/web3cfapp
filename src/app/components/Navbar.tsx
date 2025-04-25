@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import thirdwebIcon from '@public/thirdweb.svg';
+import thirdwebIcon from '@public/next.svg';
 import Link from 'next/link';
 import { ConnectButton, lightTheme, useActiveAccount } from 'thirdweb/react';
 import { client } from '../client';
@@ -19,8 +19,8 @@ const Navbar = () => {
                     <Image
                         src={thirdwebIcon}
                         alt="Your Company"
-                        width={32}
-                        height={32}
+                        width={96}
+                        height={96}
                         style={{
                         filter: "drop-shadow(0px 0px 24px #a726a9a8)",
                         }}
@@ -29,7 +29,7 @@ const Navbar = () => {
 
                     {/* Навигационные ссылки */}
                     <div className="hidden sm:block">
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-4 hover:text-bold">
                         <Link href="/">
                         <p className="rounded-md px-3 py-2 text-sm font-medium text-slate-700">
                             Compaigns
