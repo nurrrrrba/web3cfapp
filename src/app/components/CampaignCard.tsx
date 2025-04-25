@@ -3,6 +3,7 @@ import { getContract } from "thirdweb";
 import { polygonAmoy } from "thirdweb/chains";
 import { client } from "../client";
 import { useReadContract } from "thirdweb/react";
+import Link from "next/link";
 
 type CampaignCardProps = {
     campaignAddress: string;
@@ -63,7 +64,17 @@ export default function CampaignCard({campaignAddress}:CampaignCardProps) {
                         </div>
                     </div>
                 )}
+                <h5 className="mb-2 text-2xl font-bold tracking-tight">{campaignName}</h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{campaignDescription}</p>
             </div>
+            <Link href={`/campaign/${campaignAddress}`} passHref={true}>
+                <p className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg:blue-800">
+                    View Campaign
+                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </p>
+            </Link>
         </div>
     );
 }
