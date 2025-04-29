@@ -1,3 +1,5 @@
+'use client';
+
 import { createThirdwebClient } from "thirdweb";
 
 // Replace this with your client ID string
