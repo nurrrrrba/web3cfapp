@@ -6,6 +6,8 @@ import { client } from "../client";
 import { CROWDFUNDING_FACTORY } from "../constants/contracts";
 import { useReadContract } from "thirdweb/react";
 import CampaignCard from "../components/CampaignCard";
+import Spinner from "../components/Spinner";
+
 
 export default function CampaignsPage() {
   const contract = getContract({
@@ -34,7 +36,9 @@ export default function CampaignsPage() {
             />
           ))
         ) : isPending ? (
-          <p className="text-center col-span-full">Loading campaigns...</p>
+          <main className="fixed inset-0 flex flex-col items-center justify-center bg-blue/20">
+            <Spinner />
+          </main>
         ) : (
           <p className="text-center col-span-full">No campaigns found.</p>
         )}
