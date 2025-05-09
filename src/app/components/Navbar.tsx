@@ -30,7 +30,7 @@ const Navbar = () => {
                     {/* Навигационные ссылки */}
                     <div className="hidden sm:block">
                     <div className="flex space-x-4 hover:text-bold">
-                        <Link href="/">
+                        <Link href="/campaigns">
                         <p className="rounded-md px-3 py-2 text-sm font-medium text-slate-700">
                             Compaigns
                         </p>
